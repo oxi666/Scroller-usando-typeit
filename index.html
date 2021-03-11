@@ -1,0 +1,25 @@
+<html>
+    
+<head>
+        <title>Scroller by oxi</title>
+
+    </head>
+    <body>
+                <p id="scroller"></p>
+    </body>
+
+</html>
+
+<script src="../cdn.jsdelivr.net/npm/typeit%406.1.1/dist/typeit.min.js"></script>
+<script>
+    var totalStrings = ["Hi", "That is a scroller", "Follow oxi on github", "youtube", "twitter", "and add him in discord"];
+    var typeIt = new TypeIt("#scroller", { speed: 100, loop: true, waitUntilVisible: true });
+
+    totalStrings.forEach(function (str) {
+        typeIt.type(str);
+        typeIt.pause(1300);
+        typeIt.delete(str.length);
+    })
+
+    typeIt.go();
+</script>
